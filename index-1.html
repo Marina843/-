@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="style-1.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="div-1">
+            <div class="logo">Комфорт</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index-3.html">Каталог</a></li>
+                    <li><a href="index-1.html">О нас</a></li>
+                    <li><a href="index-2.html">Контакты</a></li>
+                    <li><a href="#" id="login-register-link">Войти</a></li>
+                    <li><a href="index-4.html">Корзина</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-us">
+            <div class="container">
+                <h1>О нас</h1>
+                <p class="text-1">Магазин мебели "Комфорт" — это надежный партнер в создании уютных и стильных интерьеров. Мы предлагаем широкий выбор мебели, которая сочетает в себе качество, комфорт и доступные цены. Наша миссия — помогать каждому клиенту создать идеальную атмосферу для жизни и работы.</p>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Наша история</h2>
+                        <p>Магазин "Комфорт" был основан в 2010 году и с тех пор зарекомендовал себя как один из ведущих поставщиков мебели на российском рынке. Мы начали с небольшого магазина в центре города, и сегодня наши шоурумы находятся в нескольких крупных городах страны.</p>
+
+                        <h2>Наши ценности</h2>
+                        <p>Мы ценим качество и внимание к деталям. Все товары, представленные в нашем магазине, проходят строгий контроль качества, чтобы обеспечить нашим клиентам только лучшее. Мы стремимся сделать покупки не только удобными, но и доступными.</p>
+
+                        <h2>Наши услуги</h2>
+                        <ul>
+                            <li>Доставка на дом</li>
+                            <li>Сборка мебели</li>
+                            <li>Консультации по выбору мебели</li>
+                        </ul>
+                        <h2>Наши цели</h2>
+                        <p>Мы продолжаем развиваться и стремимся расширить ассортимент, улучшить качество обслуживания и предложить нашим клиентам новые услуги. "Комфорт" — это не просто магазин мебели, это партнер в создании вашего идеального пространства.</p>
+                    </div>
+
+                    <div class="about-image">
+                        <img src="img/store.jpg">
+                    </div>
+                </div>
+            </div>
+            </section>
+    </main>
+
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Магазин мебели Комфорт. Все права защищены.</p>
+            <p><a href="#">Политика конфиденциальности</a> | <a href="#">Пользовательское соглашение</a></p>
+        </div>
+    </footer>
+
+
+
+    <div id="login-register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в учетную запись</h2>
+
+            <div class="login-form">
+                <form>
+                    <div></div>
+                    <label for="login-email">Номер телефона или Email:</label>
+                    <input type="email" id="login-email" name="login-email"><br><br>
+
+                    <label for="login-password">Пароль:</label>
+                    <input type="password" id="login-password" name="login-password"><br><br>
+
+                    <button class="button" type="submit">Войти</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Получаем модальное окно
+        var modal = document.getElementById("login-register-modal");
+
+        // Получаем ссылку, которая открывает модальное окно
+        var link = document.getElementById("login-register-link");
+
+        // Получаем элемент <span>, который закрывает модальное окно
+        var span = document.getElementsByClassName("close")[0];
+
+        // Когда пользователь кликает на ссылку, открываем модальное окно
+        link.onclick = function(event) {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+            modal.style.display = "block";
+        }
+
+        // Когда пользователь кликает на <span> (x), закрываем модальное окно
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Когда пользователь кликает вне модального окна, закрываем его
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

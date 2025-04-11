@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="style-3.css">
+    
+</head>
+<body>
+        <header>
+            <div class="div-1">
+            <div class="logo">Комфорт</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="index-1.html">О нас</a></li>
+                    <li><a href="index-2.html">Контакты</a></li>
+                    <li><a href="#" id="login-register-link">Войти</a></li>
+                    <li><a href="index-4.html">Корзина</a></li>
+                </ul>
+            </nav>
+            </div>
+
+        </header>
+
+        <main>
+            <h2>Каталог мебели</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <a href="sofas.html"><img src="img/divan6.jpg">Диваны и кресла</a>
+                </div>
+
+                <div class="product">
+                    <a href="wardrobes.html"><img src="img/shkaf6.jpg">Шкафы и стеллажи</a>
+                </div>
+
+
+                <div class="product">
+                    <a href="beds.html"><img src="img/krovat3.jpg">Кровати и матрасы</a>
+                </div>
+
+                <div class="product">
+                    <a href="kitchen.html"><img src="img/kuhnya.PNG">Кухонные гарнитуры</a>
+                </div>
+
+                <div class="product">
+                    <a href="tables.html"><img src="img/stul2.jpg">Столы и стулья</a>
+                </div>
+
+                <div class="product">
+                    <a href="curbstones.html"><img src="img/komod.jpg"> Тумбы и комоды</a>
+                </div>
+            
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Магазин мебели Комфорт. Все права защищены.</p>
+        <p><a href="#">Политика конфиденциальности</a> | <a href="#">Пользовательское соглашение</a></p>
+        </footer>
+
+
+        <div id="login-register-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Вход в учетную запись</h2>
+    
+                <div class="login-form">
+                    <form>
+                        <div></div>
+                        <label for="login-email">Номер телефона или Email:</label>
+                        <input type="email" id="login-email" name="login-email"><br><br>
+    
+                        <label for="login-password">Пароль:</label>
+                        <input type="password" id="login-password" name="login-password"><br><br>
+    
+                        <button class="button" type="submit">Войти</button>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    
+        <script>
+            // Получаем модальное окно
+            var modal = document.getElementById("login-register-modal");
+    
+            // Получаем ссылку, которая открывает модальное окно
+            var link = document.getElementById("login-register-link");
+    
+            // Получаем элемент <span>, который закрывает модальное окно
+            var span = document.getElementsByClassName("close")[0];
+    
+            // Когда пользователь кликает на ссылку, открываем модальное окно
+            link.onclick = function(event) {
+                event.preventDefault(); // Предотвращаем переход по ссылке
+                modal.style.display = "block";
+            }
+    
+            // Когда пользователь кликает на <span> (x), закрываем модальное окно
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+    
+            // Когда пользователь кликает вне модального окна, закрываем его
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+</body>
+</html>

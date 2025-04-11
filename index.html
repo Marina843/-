@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин мебели</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="div-1">
+        <div class="logo">Комфорт</div>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="index-3.html">Каталог</a></li>
+                <li><a href="index-1.html">О нас</a></li>
+                <li><a href="index-2.html">Контакты</a></li>
+                <li><a href="#" id="login-register-link">Войти</a></li>
+                <li><a href="index-4.html">Корзина</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="zag-1">Новинки</h1>
+        <div class="product-grid">
+            <div class="product">
+                <img src="img/divan1.jpg" alt="Диван">
+                <h2>Диван-кровать SOLANA Рединг</h2>
+                <p class="price">64 999 руб.</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product">
+                <img src="img/tumba2.jpg" alt="Тумба">
+                <h2>Тумба прикроватная подвесная Нео</h2>
+                <p class="price">6 799 руб.</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product">
+                <img src="img/shkaf3.jpg" alt="Шкаф">
+                <h2>Шкаф с витриной Сага</h2>
+                <p class="price">25 999 руб.</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product">
+                <img src="img/kreslo4.jpg" alt="Кресло">
+                <h2>Кресло для отдыха Коллинс</h2>
+                <p class="price">16 999 руб.</p>
+                <button>В корзину</button>
+            </div>
+            
+        </div>
+
+        <h1 class="zag-1">Скидки</h1>
+        <div class="product-grid">
+            <div class="product">
+                <img src="img/divan.PNG">
+                <h2>Диван-кровать Парма</h2>
+                <p class="price">54 999 руб.</p>
+                <p class="price-1">64 999 руб.</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product">
+                <img src="img/krovat1.jpg">
+                <h2>Кровать Каприз цвет светло-бежевый</h2>
+                <p class="price">15 999 руб.</p>
+                <p class="price-1">19 999 руб.</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product">
+                <img src="img/tumba1.jpg">
+                <h2>Тумба Лофт с 2 ящиками</h2>
+                <p class="price">1 299 руб.</p>
+                <p class="price-1">3 299 руб.</p>
+                <button>В корзину</button>
+            </div>
+            <div class="product">
+                <img src="img/garnitur1.jpg">
+                <h2>Кухонный гарнитур Лаванда</h2>
+                <p class="price">19 599 руб.</p>
+                <p class="price-1">27 599 руб.</p>
+                <button>В корзину</button>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Магазин мебели Комфорт. Все права защищены.</p>
+        <p><a href="#">Политика конфиденциальности</a> | <a href="#">Пользовательское соглашение</a></p>
+    </footer>
+
+
+
+
+    <div id="login-register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в учетную запись</h2>
+
+            <div class="login-form">
+                <form>
+                    <label for="login-email">Номер телефона или Email:</label>
+                    <input type="email" id="login-email" name="login-email"><br><br>
+
+                    <label for="login-password">Пароль:</label>
+                    <input type="password" id="login-password" name="login-password"><br><br>
+                    
+                    <button type="submit">Войти</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Получаем модальное окно
+        var modal = document.getElementById("login-register-modal");
+        // Получаем ссылку, которая открывает модальное окно
+        var link = document.getElementById("login-register-link");
+        // Получаем элемент <span>, который закрывает модальное окно
+        var span = document.getElementsByClassName("close")[0];
+        // Когда пользователь кликает на ссылку, открываем модальное окно
+        link.onclick = function(event) {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+            modal.style.display = "block";
+        }
+        // Когда пользователь кликает на <span> (x), закрываем модальное окно
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        // Когда пользователь кликает вне модального окна, закрываем его
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

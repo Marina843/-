@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style-2.css">
+</head>
+<body>
+    <header>
+        <div class="div-1">
+        <div class="logo">Комфорт</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index-3.html">Каталог</a></li>
+                <li><a href="index-1.html">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#" id="login-register-link">Войти</a></li>
+                <li><a href="index-4.html">Корзина</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <div class="dsp">
+            <div class="block-1">
+                <div class="contact-info">
+                    <h2>Контактная информация</h2>
+                    <p><strong>Телефон:</strong> +7 (999) 456-78-90</p>
+                    <p><strong>Email:</strong> info@komfort.ru</p>
+                    <p><strong>Адрес:</strong> г. Москва, ул. Мебельная, д. 1</p>
+                </div>
+                
+                 
+                <div class="contact-form">
+                    <h2>Свяжитесь с нами</h2>
+                    <form action="#" method="post">
+                        <div>
+                            <label for="name">Имя:</label>
+                            <input type="text2" id="name" name="name" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="message">Сообщение:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div>
+                        <button type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+            
+            <div>
+                <img src="img/contact-2.PNG">
+            </div>
+                
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Магазин мебели Комфорт. Все права защищены.</p>
+        <p><a href="#">Политика конфиденциальности</a> | <a href="#">Пользовательское соглашение</a></p>
+    </footer>
+
+
+
+    <div id="login-register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход в учетную запись</h2>
+
+            <div class="login-form">
+                <form>
+                    <label for="login-email">Номер телефона или Email:</label>
+                    <input type="email1" id="login-email" name="login-email"><br><br>
+
+                    <label for="login-password">Пароль:</label>
+                    <input type="password1" id="login-password" name="login-password"><br><br>
+
+                    <button type="submit1">Войти</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Получаем модальное окно
+        var modal = document.getElementById("login-register-modal");
+
+        // Получаем ссылку, которая открывает модальное окно
+        var link = document.getElementById("login-register-link");
+
+        // Получаем элемент <span>, который закрывает модальное окно
+        var span = document.getElementsByClassName("close")[0];
+
+        // Когда пользователь кликает на ссылку, открываем модальное окно
+        link.onclick = function(event) {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+            modal.style.display = "block";
+        }
+
+        // Когда пользователь кликает на <span> (x), закрываем модальное окно
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Когда пользователь кликает вне модального окна, закрываем его
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+    
+</body>
+</html>
